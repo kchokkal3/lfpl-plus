@@ -1,0 +1,6 @@
+defn g = sfn (y : (1 list) -@ (1 list)). y
+
+defn f = fn (x : 1). g fn (x : (1 list)). x
+
+val g (f ()) nil[1]
+

@@ -1,0 +1,6 @@
+(library
+ (name lfpl_lib)
+ (libraries core angstrom)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane)))

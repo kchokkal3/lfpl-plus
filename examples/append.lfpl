@@ -1,0 +1,10 @@
+decl append : (1 list) -> (1 list) -@ (1 list)
+
+defn append = sfn (x : (1 list)).
+    fn (y : (1 list)). lrec x {y | d, head, res. cons(d; head; res)}
+
+val append cons(<*>; (); cons(<*>; (); nil[1]))
+    cons(<*>; (); cons(<*>; (); cons(<*>; (); nil[1])))
+
+val append [1][(); ()] [1][(); (); ()]
+

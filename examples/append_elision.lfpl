@@ -1,0 +1,22 @@
+decl append : (1 list) -> (1 list) -@ (1 list)
+
+defn append = sfn (x : (1 list)).
+    fn (y : (1 list)). lrec x {y | d, head, res. cons(<*>; head; res)}
+
+decl append_all : ((1 list) list) -> (1 list)
+
+defn append_all = sfn (ls : ((1 list) list)).
+    lrec ls {nil[1] | d, l_head, l_res.
+        lrec l_res {cons(<*>; (); l_head) | _, head, res. cons(<*>; head; res)}}
+
+defn expand_pair = sfn (p : (<> * <>)). letp (_, _) = p in cons(<*>; (); cons(<*>; (); nil[1]))
+
+val append cons(<*>; (); cons(<*>; (); nil[1]))
+    cons(<*>; (); cons(<*>; (); cons(<*>; (); nil[1])))
+
+val append [1][(); ()] [1][(); (); ()]
+
+val append_all [(1 list)][[1][()]; [1][(); ()]; [1][(); (); ()]]
+
+val expand_pair (<*>, <*>)
+

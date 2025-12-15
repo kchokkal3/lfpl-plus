@@ -1,0 +1,13 @@
+defn true = [1; 1](1.(()))
+
+defn false = [1; 1](2.(()))
+
+decl filter_list : ((1 + 1) list) -> ((1 + 1) list)
+
+defn filter_list = sfn (l : ((1 + 1) list)).
+    lrec l {nil[(1 + 1)] | d, hd, res. case hd { _. cons(d; hd; res) | _. res}}
+
+val filter_list [(1 + 1)][true; false]
+
+val filter_list [(1 + 1)][false; false]
+

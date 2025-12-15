@@ -1,0 +1,20 @@
+defn true = [1; 1](1.(()))
+
+defn false = [1; 1](2.(()))
+
+decl invert_tree : ((1 + 1) tree) -> ((1 + 1) tree)
+
+defn invert_tree = sfn (t : ((1 + 1) tree)).
+    trec t {leaf[(1 + 1)] | d, y1, x, y2. node(d; y2; x; y1)}
+
+val node(<*>;
+    node(<*>; node(<*>; leaf[(1 + 1)]; false; leaf[(1 + 1)]); 
+        false; node(<*>; leaf[(1 + 1)]; true; leaf[(1 + 1)]));
+    true; node(<*>; leaf[(1 + 1)]; true; leaf[(1 + 1)]))
+
+val invert_tree
+    node(<*>;
+        node(<*>; node(<*>; leaf[(1 + 1)]; false; leaf[(1 + 1)]); 
+            false; node(<*>; leaf[(1 + 1)]; true; leaf[(1 + 1)]));
+        true; node(<*>; leaf[(1 + 1)]; true; leaf[(1 + 1)]))
+

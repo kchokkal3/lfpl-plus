@@ -1,0 +1,6 @@
+(library
+ (name test_lfpl)
+ (libraries lfpl_lib)
+ (inline_tests)
+ (preprocess (pps ppx_expect)))
+

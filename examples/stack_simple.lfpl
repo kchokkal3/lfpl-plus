@@ -1,0 +1,12 @@
+decl push : 1 -> (1 stack) -> (1 stack)
+
+defn push = sfn (x : 1). sfn (s : (1 stack)). scons(x; s)
+
+decl pop : (1 stack) -> (1 stack)
+
+defn pop = sfn (x : (1 stack)). scase x { snil[1] | _, tl. tl}
+
+val push () [1][|(); ()|]
+
+val pop [1][|(); ()|]
+

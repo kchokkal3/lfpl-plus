@@ -1,0 +1,10 @@
+defn id1 = sfn (x : 1). x
+
+decl id_list : (1 list) -> (1 list)
+
+defn id_list = sfn (x : (1 list)). lrec x {nil[1] | d, x, y. cons(d; id1 x; y)}
+
+val id1 ()
+
+val id_list cons(<*>; (); nil[1])
+

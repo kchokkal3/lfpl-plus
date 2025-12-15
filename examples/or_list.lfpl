@@ -1,0 +1,17 @@
+defn true = [1; 1](1.(()))
+
+defn false = [1; 1](2.(()))
+
+decl or : (1 + 1) -> (1 + 1) -> (1 + 1)
+
+defn or = sfn (x : (1 + 1)).
+    sfn (y : (1 + 1)). case x { _. true | _. case y { _. true | _. false}}
+
+decl or_list : ((1 + 1) list) -> (1 + 1)
+
+defn or_list = sfn (l : ((1 + 1) list)). lrec l {false | _, hd, res. or hd res}
+
+val or_list [(1 + 1)][true; false]
+
+val or_list [(1 + 1)][false; false]
+
