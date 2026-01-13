@@ -1,9 +1,12 @@
 # LFPL+
 
-LFPL+ is an implementation for running LFPL (with extensions) programs. The
-accompanying LFPL+ report contains more information on our extensions and
-modifications to the LFPL typing rules. 
+LFPL+ is an interpreter for LFPL with extensions. LFPL (Linear Functional Programming Language) is a programming language introduced by Martin Hofmann in 1999, and it famously characterizes the complexity class **P**. 
 
+## Contributors
+
+- Kandasamy Chokkalingam
+- Ethan Huang
+  
 ## Usage
 
 First, install the dependences with:
